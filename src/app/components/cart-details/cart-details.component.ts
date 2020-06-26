@@ -36,4 +36,16 @@ export class CartDetailsComponent implements OnInit {
     this.cartService.computeCartTotals();
   }
 
+  //increment, decrement and remove btns for quantity
+  incrementQuantity(theCartItem: CartItem){
+    this.cartService.addToCart(theCartItem);
+  }
+
+  decrementQuantity(theCartItem:CartItem){
+   this.cartService.decrementQuantity(theCartItem);
+  }
+
+  remove(theCartItem: CartItem){
+    this.cartService.remove(theCartItem);
+  }
 }
