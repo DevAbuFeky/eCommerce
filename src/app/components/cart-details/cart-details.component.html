@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <p class="mt-2">Subtotal: {{ tempCartItems.quantity * tempCartItems.unitPrice | currency: 'USD' }}</p>
-                            <button (click)="remove(tempCartItems)" class="btn btn-primary btn-sm mt-2">Remove</button>
+                            <button (click)="remove(tempCartItems)" class="btn btn-primary btn-sm mt-2"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
 
@@ -55,14 +55,20 @@
                             <p>Total Quantity: {{ totalQuantity }}</p>
                             <p>Shipping: Free</p>
                             <p>Total Price: {{ totalPrice | currency: 'USD'}}</p>
+
+                            <!--Checkout btn-->
+                            <a routerLink='/checkout' class="btn btn-primary">Checkout</a>
+
                         </td>
                     </tr>
                 </table>
              </div>
+
              <!-- if the cart item is empty -->
              <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
                  Your Shopping Cart is empty.!
              </div>
+             
         </div>
     </div>
 </div>
