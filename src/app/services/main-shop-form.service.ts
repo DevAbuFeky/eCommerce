@@ -30,7 +30,7 @@ export class MainShopFormService {
     );
   }
 
-  getCreditCardMonths(startMonth: number): Observable<number []>{
+  getCreditCardMonths(startMonth: number): Observable<number[]>{
     let data: number[] = [];
 
     // build an array for "Month" drop down list
